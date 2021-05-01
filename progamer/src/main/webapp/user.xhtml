@@ -21,7 +21,8 @@
 						style="width:100px" value="Username" />
 					<div class="p-col">
 						<p:inputText id="username" value="#{userBean.user.userName}"
-							required="true" requiredMessage="O campo nome é obrigatório">
+							required="true" validatorMessage="The username field must be between 10 and 20 characters">
+							<f:validateLength minimum="10" maximum="20" />
 							<f:ajax event="blur" render="messages" />
 						</p:inputText>
 					</div>
@@ -45,7 +46,8 @@
 						style="width:100px" value="Password" />
 					<div class="p-col">
 						<p:password id="password" value="#{userBean.user.password}"
-							required="true" requiredMessage="The password field is required">
+							required="true" validatorMessage="The username field must be between 6 and 32 characters">
+							<f:validateLength minimum="8" maximum="32" />
 							<f:ajax event="blur" render="messages" />
 						</p:password>
 					</div>
@@ -59,14 +61,6 @@
 					</p:commandButton>
 				</f:facet>
 			</p:card>
-			<p:dataTable value="#{userBean.users}" var="user">
-				<p:column headerText="Name">
-					<h:outputText value="#{user.name}" />
-				</p:column>
-				<p:column headerText="Username">
-					<h:outputText value="#{user.userName}" />
-				</p:column>
-			</p:dataTable>
 		</h:form>
 
 

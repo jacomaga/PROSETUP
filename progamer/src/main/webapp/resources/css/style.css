@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body{
-	background-color: #ddd;
+	background-color: #363434;
 }
 
 .form-card{
@@ -45,10 +45,12 @@ body{
     align-self: flex-end;
 }
 
+.ui-card-body{
+	color: white;
+	background:#77767b;
+}
 
-
-
-
-
-
+div#content{
+	margin-top: 2%;
+}
 

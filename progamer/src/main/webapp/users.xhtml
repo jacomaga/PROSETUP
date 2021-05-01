@@ -7,7 +7,15 @@
 	xmlns:p="http://primefaces.org/ui">
 <ui:composition template="header.xhtml">
 	<ui:define name="content">
-
+			<p:dataTable value="#{userBean.users}" style="background: black"
+			var="user">
+			<p:column headerText="Name">
+				<h:outputText value="#{user.name}" />
+			</p:column>
+			<p:column headerText="Username">
+				<h:outputText value="#{user.userName}" />
+			</p:column>
+		</p:dataTable>
 	</ui:define>
 </ui:composition>
 </html>
